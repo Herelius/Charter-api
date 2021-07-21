@@ -1,0 +1,47 @@
+{
+  "name": "p3_back",
+  "version": "1.0.0",
+  "description": "api directory",
+  "main": "index.js",
+  "repository": "https://github.com/WildCodeSchool/hdrain-api-lyon-js-react-march21",
+  "author": "Heranca <heranca.kamalo@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "argon2": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "express-session": "^1.17.2",
+    "joi": "^17.4.0",
+    "mongodb": "^4.0.1",
+    "mongoose": "^5.13.3",
+    "nodemailer": "^6.5.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.5",
+    "husky": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
